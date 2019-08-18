@@ -1,4 +1,10 @@
-ambiente
-db.sqlite3
-__pycache__
-.vscode
+sm.*
+venv
+*.pyc
+staticfiles
+.vscode/
+.\myproject\__pycache__\
+.\core\__pycache__\
+.\core\__pycache__
+.\accounts\__pycache__
+local_settings.py

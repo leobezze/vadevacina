@@ -1,0 +1,16 @@
+
+<div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+        <a href="">
+            <img src="/static/images/ubs.jpg" alt="" />
+        </a>
+        <div class="caption">
+            <h3>{{ posto }}</h3>
+            {{ posto.slug}}
+            {{ posto.address|linebreaks }}
+            <p>
+              <a href="{{ posto.get_absolute_url }}" class="btn
+                btn-success" role="button">Detalhes</a> 
+        </div>
+    </div>
+</div>

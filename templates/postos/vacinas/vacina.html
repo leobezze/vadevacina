@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}
+Listagem das minha vacinas | {{ block.super }}
+{% endblock  %}
+
+{% block container %}
+<div class="page-header">
+	<h1>Minhas Vacinas</h1>
+</div>
+<div class="row">
+	{% for itens in vacina %}
+	
+	<div class="col-sm-6 col-md-4">
+		<div class="thumbnail">
+			<a href="">
+				<img src="http://placehold.it/350x250" alt="" />
+			</a>
+			<div class="caption">
+				<h3>{{ itens }}</h3>
+				{{ itens.slug}}
+				{{ itens.resonsavel|linebreaks }}
+				{{ itens.lote }}
+			</div>
+		</div>
+
+		{% endfor %}
+	</div>
+	{% endblock %}
