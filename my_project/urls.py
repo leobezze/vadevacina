@@ -24,6 +24,8 @@ from core import views
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('minhas_vacinas/', views.vacina, name='vacina'),
+    path('minhas_vacinas/registro', views.registro_vacina, name='registro_vacina'),
     path('contato/', views.contact, name='contact'),
     path('entrar/', login, {'template_name':'login.html'}, name='login'),
     path('sair/', logout, {'next_page':'index'}, name='logout'),

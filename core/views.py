@@ -21,6 +21,19 @@ class IndexView(TemplateView):
 
 index = IndexView.as_view()
 
+class VacinaView(TemplateView):
+
+    template_name = 'postos/vacinas/vacina.html'
+
+
+vacina = VacinaView.as_view()
+
+class RegistroVacinaView(TemplateView):
+
+    template_name = 'postos/vacinas/registro_vacinas.html'
+
+
+registro_vacina = RegistroVacinaView.as_view()
 
 def contact(request):
     success = False

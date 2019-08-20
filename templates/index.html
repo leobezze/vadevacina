@@ -1,74 +1,93 @@
 <!DOCTYPE html>
+<html lang="en">
 {% load static %}
-<html>
 <head>
-	<meta charset="utf-8">
-	<title>{% block title %}#VaDeVacina{% endblock %}</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://www.fontify.me/wf/fff6312bff92af0686e731bf7890edd2" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="{% static 'style.css' %}">
+	<script src="{% static 'script.js' %}"></script>
+	<link rel="shortcut icon" href="{% static 'arquivos/seringa-crop2.ico' %}" type="image/x-icon">
+	<title>{% block title %}Vá de vacina{% endblock %}</title>
+
 </head>
+
 <body>
 	<header>
-		<div class="container">
-			<div class="navbar-header">
-				<a href="#" class="logo" ><h1>#VADEVACINA</h1></a>
-				<a href="#" class="menu"><img src="images/menu.png"></a>
+		<nav>
+			<div class="logo-empresa">
+				<img src="{% static 'arquivos/logo.png' %}" alt="saude">
 			</div>
-			<nav class="menu">
-				<ul>
-					<li><a href="{% url 'accounts:register' %}">Inscrever-se</a></li>
-					<li><a href="{% url 'login' %}">Entrar</a></li>
-				</ul>
-			</nav>
-		</div>
-		<nav class="menu-responsive">
-			<img class="close" src="images/menu.png">
-			<ul>
-				<li><a href="#"><span>Inscrever-se</span></a></li>
-				<li><a href="#"><span>Entrar</span></a></li>
-				<img class="logo-resp" src="images/logo.png">
-			</ul>
-		</nav>		
-			
-		</header>
-
-		<section class="video" style="background-color: #fff">
-			<video width="100%" height="auto" autoplay loop>
-				<source src="{% static 'images/vacina.webm' %}" type="video/webm">
-				</video>
-				<div class="texto">
-					<h1>PROTEJA-SE<br>PROTEJA SUA FAMILIA</h1>
+			<div class="itens-menu">
+				<a href="#login" class="scrollSuave">
+					<button>
+						<p>Login - Cidadão</p>
+					</button>
+				</a>
+				<a href="#como-funciona" class="scrollSuave">
+					<button>
+						<p>Como Funciona?</p>
+					</button>
+				</a>
+				<a href="#login-posto">
+					<button>
+						<p>Login - Posto de saúde</p>
+					</button>
+				</a>
+			</div>
+		</nav>
+		<section>
+			<div class="video">
+				<video width="100%" height="auto" autoplay loop>
+					<source src="{% static 'arquivos/vacina.mp4' %}" type="video/mp4">
+					</video>
+					<div class="escrever">
+						<div class="escrever-video">Proteja-se, Proteja a sua familia.</div>
+					</div>
 				</div>
-
+			</section>
+		</header>
+		<aside>
+			<div class="container">
+				<div class="logo-proj">
+					<a id="login"><strong></strong></a>
+					<p>Vá de Vacina</p>
+					<img src="{% static 'arquivos/seringa-crop1.png' %}" alt="">
+				</div>
+				<div class="caixa-login">
+					<div class="conteudo-info">
+						<h1>Bem-vindo(a)!</h1>
+						<p>O site Vá de Vacina lhe possibilita a portabilidade e acompanhamento de sua carteira de
+							vacina de
+							forma totalmente digital.
+							Foi produzido pela empresa Health e Integrado ao Sistema Único de Saúde (SUS) na cidade de
+							São
+						Paulo.</p>
+						<p>
+						</div>
+						<div class="conteudo-login">
+							<h2>Acesse aqui ou Cadastre-Se</h2>
+							<a href="{% url 'login' %}"><button class="btn btn-primario">Entrar</button></a>
+							<p>OU</p>
+							<a href="{% url 'accounts:register' %}"><button class="btn btn-primario">Cadastrar</button></a>
+						</span>
+					</div>
+				</div>
 			</div>
-
-		</section>
-		<section class="container_02">
-			<div class="content">
-				<h1>TITULO</h1>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-			</div>
-			<div class="content">
-				<h1>TITULO</h1>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-			</div>
-			<div class="content">
-				<h1>TITULO</h1>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-			</div>
-		</section>
+		</aside>
 		<section class="maps">
-			<h1>MAPA DE COBERTURA</h1>
 			<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d58456.781012910884!2d-46.62100726450836!3d-23.692087909985585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1subs!5e0!3m2!1spt-BR!2sbr!4v1566103972290!5m2!1spt-BR!2sbr" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 		</section>
-
 		<footer>
-             <p>VÁDEVACINA SERVIÇOS LTDA - Copyright © 2019 - <a href="www.vacina.com.br">Carteira de Vacina Digital</a> -
-            Desenvolvido por Leonardo, Rubens e João.</p>
+			<div id="rodape">
+
+				<p>VádeVacina Serviços LTDA - Copyright © 2019 - <a href="www.vadevacina.com.br">Health</a> -
+				Desenvolvido por Leonardo, Rubens e João.</p>
+			</div>
+			<a id="como-funciona">Passo a passo</a>
+			<a id="login-posto">Faça parte da rede proteção</a>
 		</footer>
-
-
 	</body>
+
 	</html>

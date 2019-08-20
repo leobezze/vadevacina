@@ -5,25 +5,167 @@ Listagem das minha vacinas | {{ block.super }}
 {% endblock  %}
 
 {% block container %}
+<style type="text/css">
+.circulo {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: 1px solid black;
+}
+.b{
+	border: 1px solid black;
+}
+.bo{
+	font-weight: bold;
+}
+tr{
+	border: 1px solid black;
+	padding: 20px;
+}
+th{
+	border: 1px solid black;
+	padding: 20px;
+}
+td{
+	border: 1px solid black;
+	padding: 20px;
+}
+</style>
 <div class="page-header">
-	<h1>Minhas Vacinas</h1>
+	<h1></h1>
 </div>
 <div class="row">
-	{% for itens in vacina %}
-	
-	<div class="col-sm-6 col-md-4">
-		<div class="thumbnail">
-			<a href="">
-				<img src="http://placehold.it/350x250" alt="" />
-			</a>
+	<div class="col-sm-12">
+		
+		<div class="col-sm-3">
+
 			<div class="caption">
-				<h3>{{ itens }}</h3>
-				{{ itens.slug}}
-				{{ itens.resonsavel|linebreaks }}
-				{{ itens.lote }}
+				<img src="/static/images/user.png" class="circulo">
+				<h3>Meus Dados</h3>
+				<span class="bo">Nome:</span> {{ user }}<br>
+				<span class="bo">Email:</span> {{ user.email }}<br>
+				<span class="bo">Cartão do SUS:</span> {{ user.username }}<br>
+				<span class="bo">RG:</span> 461440078<br>
+				<span class="bo">CPF:</span> 43803978805
+
+
 			</div>
+
 		</div>
 
-		{% endfor %}
+		
+		
+		<div class="col-sm-9">
+			
+
+			<table>
+				<h1>Vacinas Obrigatorias</h1>
+				<tr>
+					<th class="b">#</th>
+					<th class="b">Coqueluche, Difteria, Tétano</th>
+					<th class="b">Hepatite B</th>
+					<th class="b">Hib Hemófilo</th>
+					<th class="b">Sarampo, Caxumba, Rubéola</th>
+				</tr>
+
+				<tr>
+					<td class="b">
+						1ª
+					</td>
+					<td class="b">
+						Data: 08/03/05<br>
+						Lote: 31656<br>
+						Respondavel: Tereza<br>
+						Cód. 4564864 
+					</td>
+					<td class="b">
+						Data: 08/03/05<br>
+						Lote: 32156<br>
+						Respondavel: Tereza<br>
+						Cód. 4564864 
+					</td>
+					<td class="b">
+						Data: 05/01/05<br>
+						Lote: 23456<br>
+						Respondavel: Monica<br>
+						Cód. 4564864 
+					</td>
+					<td class="b">
+						Data: 08/03/05<br>
+						Lote: 78412<br>
+						Respondavel: Maria<br>
+						Cód. 4564864 
+					</td>
+
+				</tr>
+
+				<tr class="b">
+					<td class="b">
+						2ª
+					</td>
+					<td class="b">
+						Data: 09/05/05<br>
+						Lote: 45615<br>
+						Respondavel: Maria<br>
+						Cód. 3546848 
+					</td>
+					<td class="b">
+						Data: 09/05/05<br>
+						Lote: 55451<br>
+						Respondavel: Maria<br>
+						Cód. 5564651 
+					</td>
+					<td class="b">
+						Data: 14/02/05<br>
+						Lote: 54515<br>
+						Respondavel: Solange<br>
+						Cód. 5846842 
+					</td>
+					<td class="b">
+						Data: 09/05/05<br>
+						Lote: 35153<br>
+						Respondavel: Tereza<br>
+						Cód. 1654651
+					</td>
+
+				</tr>
+
+				<tr class="b">
+					<td class="b">
+						3ª
+					</td>
+					<td class="b">
+						Data: 21/07/05<br>
+						Lote: 35156<br>
+						Respondavel: Tereza<br>
+						Cód. 4564864 
+					</td>
+					<td class="b">
+						Data: 21/07/05<br>
+						Lote: 98788<br>
+						Respondavel: Solange<br>
+						Cód. 4564864 
+					</td>
+					<td class="b">
+						Data: 21/07/05<br>
+						Lote: 642122<br>
+						Respondavel: Maria<br>
+						Cód. 4564864 
+					</td>
+					<td class="b">
+						Data: 18/06/11<br>
+						Lote: 32156<br>
+						Respondavel: Mariza<br>
+						Cód. 4564864 
+					</td>
+
+				</tr>
+
+
+			</table>
+
+		</div>
+
 	</div>
+
 	{% endblock %}
