@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 
 import os
 import dj_database_url
-from settings import BASE_DIR, PROJECT_ROOT
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
