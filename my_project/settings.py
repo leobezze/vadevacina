@@ -151,7 +151,7 @@ DEFAULT_FROM_EMAIL = 'admin@my_project.com'
 
 # auth
 LOGIN_URL = 'login'
-LOGIN_REDIRECT_URL = 'index'
+LOGIN_REDIRECT_URL = 'posto:registro_vacina'
 LOGOUT_URL = 'logout'
 AUTH_USER_MODEL = 'accounts.User'
 AUTHENTICATION_BACKENDS = (
